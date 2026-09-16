@@ -5,7 +5,7 @@ Web tư vấn đăng ký 5 môn AP: Toán · Vật lý · Hóa học · Tin họ
 - **Demo (GitHub Pages):** https://kimkenpkl.github.io/AP-TuVan-2026/
 - **Bản PROMAX:** https://kimkenpkl.github.io/AP-TuVan-2026/index-promax.html
 - **Trang chính:** `index.html` (mở là chạy, không cần build)
-- **Bản PROMAX:** `index-promax.html` — tra cứu 10 ngành + quiz + máy tính tiết kiệm, lịch thi chi tiết, format đề 2026/2027, AP Scholar, gửi điểm, checklist ngày thi, credit 20 trường, merit Mỹ, tin du học 2026
+- **Bản PROMAX:** `index-promax.html` — tra cứu 10 ngành + quiz + máy tính tiết kiệm, lịch thi chi tiết, format đề 2026/2027, AP Scholar, gửi điểm, checklist ngày thi, credit 30+ trường (Mỹ, Anh, Canada, Úc, Singapore, Hong Kong, Hàn Quốc, châu Âu), merit Mỹ, tin du học 2026
 - **Dashboard in ấn:** `AP-Dashboard.html`
 - **Logo:** `assets/logos/` (logo THPT Chi Lăng + 20 trường ĐH, favicon chính thức)
 - **Báo cáo chi tiết:** `01_BaoCao_TuVan_AP.md`
