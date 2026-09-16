@@ -3,242 +3,372 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AP tại Trường 2026 — Chọn đúng môn, trúng đúng ngành | Toán · Lý · Hóa · Tin · Anh</title>
-<meta name="description" content="Chương trình AP tại trường: Toán, Vật lý, Hóa học, Tin học, Tiếng Anh. Tra cứu combo theo ngành, lộ trình thi tháng 5, học liệu chuẩn College Board, Khan Academy, AP Classroom.">
+<title>AP tại Trường 2026 — Chọn đúng môn, trúng đúng ngành</title>
+<meta name="description" content="Chương trình AP tại trường: Toán, Vật lý, Hóa học, Tin học, Tiếng Anh. Tra cứu combo theo ngành, lộ trình thi tháng 5, học liệu chuẩn College Board và Khan Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0f2040; --body:#33415c; --muted:#64748b;
-  --bg:#f6f8fc; --card:#ffffff; --line:#e3e9f4;
-  --accent:#1d4ed8; --accent-dark:#1e3a8a; --accent-soft:#e3ecff;
-  --radius:16px;
+  --ink:#0e1b2e; --body:#3b4a63; --muted:#6b7a93;
+  --bg:#f5f7fb; --card:#ffffff; --line:#e2e9f3;
+  --navy:#0a2472; --navy-deep:#071a52; --teal:#0e7c6b; --teal-soft:#e0f2ee;
+  --amber:#e8860b; --amber-soft:#fdf0dc;
+  --navy-soft:#e7edfb;
+  --r-lg:20px; --r-md:14px; --r-pill:999px;
+  --shadow:0 10px 30px rgba(14,27,46,.08);
+  --shadow-lg:0 24px 60px rgba(10,36,114,.16);
+  --font-display:'Lexend','Be Vietnam Pro','Segoe UI',sans-serif;
+  --font-body:'Be Vietnam Pro','Segoe UI',Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--body);font-family:"Segoe UI","Be Vietnam Pro",Arial,sans-serif;line-height:1.65}
-h1,h2,h3{color:var(--ink);line-height:1.25}
-a{color:var(--accent)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
-.nav .wrap{display:flex;align-items:center;gap:16px;height:64px}
-.brand{font-weight:800;color:var(--ink);font-size:15px;white-space:nowrap}
-.brand span{color:var(--accent)}
-.links{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
-.links a{text-decoration:none;color:var(--body);font-weight:600;font-size:13.5px;padding:8px 10px;border-radius:999px}
-.links a:hover{background:var(--accent-soft);color:var(--ink)}
-.btn{display:inline-block;background:var(--accent);color:#fff !important;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font-body);line-height:1.7;font-size:16px}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);line-height:1.25;margin:0}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+/* ── announcement ── */
+.announce{background:var(--navy-deep);color:#fff;font-size:13.5px;text-align:center;padding:9px 16px;font-weight:500}
+.announce b{color:#ffd9a0}
+.announce a{color:#fff;font-weight:700}
+/* ── nav ── */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:800;color:var(--ink);font-size:15px;white-space:nowrap;text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex:none}
+.brand small{display:block;font-family:var(--font-body);font-weight:500;color:var(--muted);font-size:11px;line-height:1.2}
+.links{margin-left:auto;display:flex;gap:2px}
+.links a{text-decoration:none;color:var(--body);font-weight:600;font-size:14px;padding:9px 13px;border-radius:var(--r-pill);transition:background .2s}
+.links a:hover{background:var(--navy-soft);color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;text-decoration:none;font-family:var(--font-display);font-weight:700;padding:13px 26px;border-radius:var(--r-pill);border:0;cursor:pointer;font-size:15px;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 8px 20px rgba(10,36,114,.22)}
+.btn:hover{background:var(--navy-deep);box-shadow:0 12px 26px rgba(10,36,114,.3)}
 .btn:active{transform:translateY(1px) scale(.98)}
-.btn.ghost{background:#fff;color:var(--accent) !important;border:2px solid var(--accent)}
-.btn.small{padding:9px 16px;font-size:13.5px}
-/* HERO split */
-.hero{background:#fff;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;padding:40px 20px 32px;align-items:center}
-.hero h1{font-size:40px;margin:0 0 10px;letter-spacing:-.02em}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero p.sub{font-size:16px;max-width:56ch;margin:0 0 18px}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-.trust{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.trust span{background:var(--accent-soft);color:var(--accent-dark);font-weight:700;font-size:12.5px;border-radius:999px;padding:6px 12px}
-.hero-visual{background:var(--ink);color:#fff;border-radius:20px;padding:22px;box-shadow:0 18px 40px rgba(15,32,64,.22)}
-.hero-visual h3{color:#fff;margin:0 0 4px;font-size:16px}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px}
-.stat b{display:block;font-size:22px}
-.stat small{opacity:.85}
-/* SECTIONS */
-section.block{padding:34px 0 6px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 8px 24px rgba(15,32,64,.06)}
-.sec-head{max-width:72ch;margin-bottom:14px}
-.sec-head h2{font-size:26px;margin:0 0 6px}
-.sec-head p{margin:0;color:var(--muted)}
-/* bento why */
-.bento{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:14px}
-.bento .cell{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
-.bento .cell.hero-cell{background:var(--ink);color:#fff;border-color:var(--ink)}
-.bento .cell.hero-cell h3{color:#fff}
-.bento h3{margin:0 0 6px;font-size:17px}
+.btn.amber{background:var(--amber);box-shadow:0 8px 20px rgba(232,134,11,.3)}
+.btn.amber:hover{background:#c96f06}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--navy);box-shadow:none}
+.btn.ghost:hover{background:var(--navy-soft)}
+.btn.small{padding:10px 18px;font-size:13.5px}
+/* ── hero ── */
+.hero{background:#fff;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-140px;right:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(14,124,107,.12),transparent 70%)}
+.hero::after{content:"";position:absolute;bottom:-180px;left:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(10,36,114,.1),transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;padding:64px 24px 56px;align-items:center;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--teal-soft);color:var(--teal);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:7px 15px;margin-bottom:18px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--teal);flex:none}
+.hero h1{font-size:52px;font-weight:800;letter-spacing:-.025em;margin-bottom:16px}
+.hero h1 .hl{color:var(--teal);position:relative;white-space:nowrap}
+.hero h1 .hl svg{position:absolute;left:0;bottom:-8px;width:100%;height:10px}
+.hero .sub{font-size:17px;max-width:54ch;margin:0 0 26px;color:var(--body)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.proof{display:flex;align-items:center;gap:14px}
+.avatars{display:flex}
+.avatars span{width:38px;height:38px;border-radius:50%;border:3px solid #fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:14px;color:#fff;margin-left:-10px}
+.avatars span:first-child{margin-left:0}
+.proof p{margin:0;font-size:13.5px;color:var(--muted)}
+.proof p b{color:var(--ink)}
+/* hero card */
+.exam-card{background:var(--ink);color:#fff;border-radius:24px;padding:28px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.exam-card::before{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(14,124,107,.35),transparent 70%)}
+.exam-card h3{color:#fff;font-size:17px;margin-bottom:2px;position:relative}
+.exam-card>p{position:relative;margin:0 0 18px;font-size:13.5px;opacity:.75}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:14px 16px}
+.stat b{display:block;font-family:var(--font-display);font-size:26px;color:#fff;line-height:1.1}
+.stat b em{font-style:normal;color:#ffd9a0}
+.stat small{font-size:12.5px;opacity:.7}
+.exam-note{position:relative;margin:16px 0 0;font-size:12.5px;opacity:.65}
+/* ── trust strip ── */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px}
+.trust span.lbl{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.trust .chip{border:1.5px solid var(--line);border-radius:var(--r-pill);padding:6px 15px;font-size:13px;font-weight:600;color:var(--ink);background:var(--bg)}
+/* ── sections ── */
+section.block{padding:56px 0 8px}
+.sec-head{max-width:76ch;margin-bottom:24px}
+.sec-kicker{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.sec-head h2{font-size:32px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sec-head p{margin:0;color:var(--muted);font-size:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;box-shadow:var(--shadow)}
+/* bento */
+.bento{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:16px;margin-top:8px}
+.cell{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;transition:transform .2s,box-shadow .2s}
+.cell:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.cell.hero-cell{background:linear-gradient(135deg,var(--navy) 0%,#123a8f 60%,var(--teal) 130%);border:0;color:#fff;grid-row:span 2;display:flex;flex-direction:column;justify-content:center}
+.cell.hero-cell h3{color:#fff;font-size:22px;margin:14px 0 8px}
+.cell.hero-cell p{opacity:.88;margin:0}
+.cell h3{font-size:17px;margin:12px 0 6px}
+.cell p{margin:0;font-size:14.5px;color:var(--muted)}
+.cell.hero-cell p{color:#fff}
+.icon-badge{width:44px;height:44px;border-radius:13px;background:var(--navy-soft);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.hero-cell .icon-badge{background:rgba(255,255,255,.14);color:#ffd9a0}
 /* tabs */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
-.tabs button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;color:var(--body);font-size:14px}
-.tabs button.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.course{display:none;border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.tabs button{font-family:var(--font-display);border:2px solid var(--line);background:#fff;border-radius:var(--r-pill);padding:10px 20px;font-weight:600;cursor:pointer;color:var(--body);font-size:14px;transition:all .2s}
+.tabs button:hover{border-color:var(--navy);color:var(--navy)}
+.tabs button.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.course{display:none;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;background:var(--bg);animation:fadeUp .35s ease}
 .course.active{display:block}
-.course h3{margin:0 0 6px;font-size:19px}
-.meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
-.meta span{background:var(--accent-soft);color:var(--accent-dark);border-radius:8px;padding:4px 10px;font-size:12.5px;font-weight:700}
-.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.cols2 ul{margin:8px 0;padding-left:18px}
-/* compare table */
-.table-scroll{overflow:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
-table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
-th,td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:center;vertical-align:top}
-thead th{background:var(--ink);color:#fff;border-bottom:0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.course h3{font-size:21px;margin-bottom:10px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.meta span{background:#fff;border:1.5px solid var(--line);color:var(--navy);border-radius:9px;padding:5px 12px;font-size:12.5px;font-weight:600}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cols2 h4{font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin:0 0 6px}
+.cols2 ul{margin:0;padding-left:19px;font-size:15px}
+.cols2 li{margin-bottom:6px}
+/* table */
+.table-scroll{overflow:auto;border:1px solid var(--line);border-radius:var(--r-md);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:660px}
+thead th{background:var(--ink);color:#fff;padding:13px 12px;font-family:var(--font-display);font-size:13.5px}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:center;vertical-align:top}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
 tbody th,td:first-child{text-align:left}
-.pill{display:inline-block;border-radius:999px;padding:4px 12px;font-weight:800;font-size:12.5px}
-.p1{background:var(--accent);color:#fff}
-.p2{background:var(--accent-soft);color:var(--accent-dark);border:1.5px solid var(--accent)}
-.p0{background:#fff;color:var(--muted);border:1.5px dashed #b6c2d6}
+tbody tr:hover td,.table-scroll tbody tr:hover th{background:#f8faff}
+.pill{display:inline-block;border-radius:var(--r-pill);padding:4px 13px;font-weight:700;font-size:12.5px;white-space:nowrap}
+.p1{background:var(--navy);color:#fff}
+.p2{background:var(--teal-soft);color:#0b5f53;border:1.5px solid var(--teal)}
+.p0{background:#fff;color:var(--muted);border:1.5px dashed #b9c4d6}
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
-.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;position:relative}
-.step b.num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center;margin-bottom:8px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;counter-reset:step}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;position:relative;transition:transform .2s,box-shadow .2s}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step .num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;align-items:center;justify-content:center;margin-bottom:12px}
+.step:last-child .num{background:var(--amber)}
+.step h3{font-size:16px;margin-bottom:6px}
+.step p{margin:0;font-size:14px;color:var(--muted)}
 /* combo */
-.combo-btns{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.combo-btns button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:14px;color:var(--body)}
+.combo-btns{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.combo-btns button{font-family:var(--font-display);border:2px solid var(--line);background:#fff;border-radius:var(--r-pill);padding:10px 19px;font-weight:600;cursor:pointer;font-size:14px;color:var(--body);transition:all .2s}
+.combo-btns button:hover{border-color:var(--navy);color:var(--navy)}
 .combo-btns button.active{background:var(--ink);border-color:var(--ink);color:#fff}
-#comboBox{background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:12px;padding:16px;line-height:1.7;color:var(--ink)}
-/* resources */
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-.res{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
-.res.free{border-top:5px solid var(--accent)}
-.res.paid{border-top:5px solid var(--ink)}
-.res h3{margin:0 0 4px;font-size:16px}
-.res small{color:var(--muted)}
+#comboBox{background:linear-gradient(135deg,#eef4ff,#e6f5f1);border:1.5px solid var(--navy);border-radius:var(--r-md);padding:20px 22px;line-height:1.75;color:var(--ink);font-size:15px;animation:fadeUp .3s ease}
 /* tiers */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-.tier-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
-.tier-card.featured{border:2px solid var(--accent)}
-.tier-card h3{margin:0 0 6px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.tier-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;transition:transform .2s,box-shadow .2s}
+.tier-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.tier-card.featured{background:var(--ink);border-color:var(--ink);color:#fff;position:relative}
+.tier-card.featured h3{color:#fff}
+.tier-card.featured p{opacity:.85}
+.tier-card.featured small{opacity:.65}
+.tier-tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:4px 12px;background:var(--navy-soft);color:var(--navy);margin-bottom:12px}
+.tier-card.featured .tier-tag{background:var(--amber);color:#fff}
+.tier-card h3{font-size:18px;margin-bottom:8px}
+.tier-card p{font-size:14.5px;margin:0 0 10px}
+.tier-card small{color:var(--muted);font-size:13px}
+/* resources */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.res{background:var(--bg);border:1px solid var(--line);border-top:5px solid var(--teal);border-radius:var(--r-lg);padding:24px;transition:transform .2s,box-shadow .2s}
+.res:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.res.paid{border-top-color:var(--navy)}
+.res h3{font-size:16.5px;margin:12px 0 8px}
+.res p{font-size:14.5px;margin:0 0 10px}
+.res small{color:var(--muted);font-size:13px}
 /* faq */
-details{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px;margin:10px 0}
-summary{cursor:pointer;font-weight:800;color:var(--ink)}
-/* final cta */
-.final{background:var(--ink);color:#fff;border-radius:20px;padding:30px 24px;text-align:center;margin:30px 0}
-.final h2{color:#fff;margin:0 0 8px;font-size:26px}
-.final p{opacity:.9;max-width:64ch;margin:0 auto 16px}
-footer{color:var(--muted);font-size:13px;padding:22px 0 34px;text-align:center}
+details.faq{border:1px solid var(--line);border-radius:var(--r-md);background:#fff;margin:10px 0;overflow:hidden;transition:box-shadow .2s}
+details.faq[open]{box-shadow:var(--shadow)}
+details.faq summary{cursor:pointer;font-family:var(--font-display);font-weight:600;color:var(--ink);padding:17px 20px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .plus{flex:none;width:26px;height:26px;border-radius:50%;background:var(--navy-soft);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-weight:700;transition:transform .25s,background .25s}
+details.faq[open] summary .plus{transform:rotate(45deg);background:var(--navy);color:#fff}
+details.faq .faq-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+details.faq[open] .faq-body{grid-template-rows:1fr}
+details.faq .faq-body>div{overflow:hidden}
+details.faq .faq-body p{margin:0;padding:0 20px 18px;font-size:15px}
+/* final */
+.final{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 55%,#0d4d44);color:#fff;border-radius:28px;padding:52px 32px;text-align:center;margin:56px 0 8px;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(255,255,255,.12),transparent 70%)}
+.final h2{color:#fff;font-size:30px;margin-bottom:10px;position:relative}
+.final p{opacity:.88;max-width:62ch;margin:0 auto 24px;position:relative}
+.final .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.final small{display:block;margin-top:16px;opacity:.6;position:relative}
+footer.site{background:var(--ink);color:#fff;margin-top:56px}
+footer.site .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding:44px 24px 30px}
+footer.site h4{color:#fff;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;opacity:.7}
+footer.site p,footer.site li{font-size:14px;opacity:.8}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:8px}
+footer.site a{color:#fff}
+.copyright{border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:12.5px;opacity:.55;padding:18px 24px}
 /* reveal */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
 .reveal.in{opacity:1;transform:none}
-@media (max-width:900px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero h1{font-size:30px}
-  .bento,.cols2,.res-grid,.tiers,.steps{grid-template-columns:1fr}
+.reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding:48px 24px 44px}
+  .hero h1{font-size:36px}
+  .bento{grid-template-columns:1fr}
+  .cell.hero-cell{grid-row:auto}
+  .cols2,.tiers,.res-grid,.steps{grid-template-columns:1fr 1fr}
+  .panel{padding:26px 20px}
   .links{display:none}
+  footer.site .wrap{grid-template-columns:1fr}
 }
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media print{.nav,.hero-cta,.combo-btns,.final .btn{display:none}}
+@media (max-width:640px){.cols2,.tiers,.res-grid,.steps{grid-template-columns:1fr}.hero h1{font-size:31px}.sec-head h2{font-size:25px}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.course,#comboBox{animation:none}}
+@media print{.nav,.announce,.hero-cta,.tabs,.combo-btns,.final .row{display:none}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<nav class="nav"><div class="wrap">
-  <div class="brand">🎓 AP TẠI TRƯỜNG <span>· 2026</span></div>
+<div class="announce">Đăng ký AP 2026 đang mở — các em hoàn thành trong <b>48h</b> để trường xếp lớp · <a href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Mở link đăng ký</a></div>
+
+<nav class="nav" aria-label="Điều hướng chính"><div class="wrap">
+  <a class="brand" href="#top"><span class="brand-mark">AP</span><span>AP tại Trường · 2026<small>Toán · Lý · Hóa · Tin · Anh</small></span></a>
   <div class="links">
-    <a href="#mon-hoc">Môn học</a><a href="#so-sanh">So sánh</a><a href="#lo-trinh">Lộ trình</a><a href="#tra-cuu">Tra cứu ngành</a><a href="#hoc-lieu">Học liệu</a><a href="#faq">FAQ</a>
+    <a href="#mon-hoc">Môn học</a><a href="#so-sanh">So sánh</a><a href="#lo-trinh">Lộ trình</a><a href="#tra-cuu">Tra cứu ngành</a><a href="#du-hoc">Du học</a><a href="#hoc-lieu">Học liệu</a><a href="#faq">FAQ</a>
   </div>
   <a class="btn small" style="margin-left:12px" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Đăng ký ngay</a>
 </div></nav>
 
-<header class="hero"><div class="wrap">
+<header class="hero" id="top"><div class="wrap">
   <div>
-    <h1>Chọn đúng môn AP,<br>trúng <em>đúng ngành mơ ước.</em></h1>
-    <p class="sub">Trường mở 5 môn AP: Toán, Vật lý, Hóa học, Tin học, Tiếng Anh. Các em được đăng ký nhiều môn theo nhu cầu.</p>
+    <span class="eyebrow"><i></i>Chương trình AP · Năm học 2026</span>
+    <h1>Chọn đúng môn AP,<br>trúng <span class="hl">đúng ngành mơ ước.<svg viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 Q 100 -2 198 6" stroke="#0e7c6b" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span></h1>
+    <p class="sub">Trường mở 5 môn AP. Các em được đăng ký nhiều môn tùy nhu cầu và định hướng du học, săn học bổng.</p>
     <div class="hero-cta">
-      <a class="btn" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Đăng ký trong 48h</a>
+      <a class="btn amber" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Đăng ký trong 48h
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a class="btn ghost" href="#tra-cuu">Tra cứu combo theo ngành</a>
     </div>
-    <div class="trust">
-      <span>✓ Chuẩn College Board AP Central</span>
-      <span>✓ Học liệu Khan Academy miễn phí</span>
-      <span>✓ Thi tháng 5 · Thang điểm 1–5</span>
+    <div class="proof">
+      <div class="avatars" aria-hidden="true">
+        <span style="background:#0a2472">T</span><span style="background:#0e7c6b">L</span><span style="background:#e8860b">H</span><span style="background:#33415c">+2</span>
+      </div>
+      <p><b>Nội dung đối chiếu College Board &amp; Khan Academy.</b><br>Chuẩn cấu trúc đề, thang điểm và chính sách tín chỉ 2026.</p>
     </div>
   </div>
-  <div class="hero-visual">
+  <div class="exam-card">
     <h3>Kỳ thi AP tháng 5 — con số cần nhớ</h3>
-    <small style="opacity:.8">Điểm thi (không phải điểm trên lớp) quyết định quy đổi tín chỉ.</small>
+    <p>Điểm thi (thang 1–5), không phải điểm trên lớp, quyết định quy đổi tín chỉ.</p>
     <div class="stat-grid">
-      <div class="stat"><b>5 môn</b><small>trường tổ chức</small></div>
-      <div class="stat"><b>3–8</b><small>tín chỉ ĐH / môn điểm tốt</small></div>
-      <div class="stat"><b>$10k–30k</b><small>có thể tiết kiệm với 5–8 AP</small></div>
-      <div class="stat"><b>3+ / 4–5</b><small>trường công / trường top yêu cầu</small></div>
+      <div class="stat"><b><em data-count="5">0</em> môn</b><small>trường tổ chức năm nay</small></div>
+      <div class="stat"><b><em data-count="8">0</em> tín chỉ</b><small>đại học / môn điểm tốt</small></div>
+      <div class="stat"><b>$<em data-count="30">0</em>k</b><small>có thể tiết kiệm với 5–8 AP</small></div>
+      <div class="stat"><b><em data-count="3">0</em>+ / 4–5</b><small>trường công / trường top yêu cầu</small></div>
     </div>
+    <p class="exam-note">Nhớ gửi điểm chính thức qua College Board về trường đại học — không tự động cộng.</p>
   </div>
 </div></header>
+
+<div class="trust"><div class="wrap">
+  <span class="lbl">Chuẩn theo</span>
+  <span class="chip">College Board AP Central</span>
+  <span class="chip">Khan Academy AP</span>
+  <span class="chip">AP Classroom</span>
+  <span class="chip">Bluebook Digital</span>
+</div></div>
 
 <div class="wrap">
 
 <section class="block reveal"><div class="panel">
-  <div class="sec-head"><h2>Vì sao nên học AP ngay tại trường?</h2>
-  <p>Học theo chuẩn các trung tâm luyện thi lớn (Princeton Review, Kaplan, Khan Academy) nhưng lợi thế là học cùng thầy cô, đúng thời khóa biểu, không tốn thêm học phí ngoài.</p></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Vì sao học AP</div>
+    <h2>Học chuẩn trung tâm lớn, ngay tại trường mình</h2>
+    <p>Cùng cấu trúc luyện thi của Princeton Review hay Kaplan — nhưng lợi thế là học cùng thầy cô, đúng thời khóa biểu, không tốn thêm học phí ngoài.</p>
+  </div>
   <div class="bento">
-    <div class="cell hero-cell"><h3>Mạnh hồ sơ du học &amp; học bổng</h3><p>AP là thước đo “dám học khó” (rigor). Bộ hồ sơ Merit chuẩn 2026: GPA 8.5+, IELTS 6.5–7.5, SAT 1450+, 3–5 AP điểm 4–5.</p></div>
-    <div class="cell"><h3>Đổi tín chỉ, nhẹ năm nhất</h3><p>BC, Chemistry, CSA quy đổi trực tiếp sang Calc I–II, Gen Chem, CS101 ở hàng trăm trường công.</p></div>
-    <div class="cell"><h3>Viết luận tốt hơn</h3><p>AP English Lang rèn viết học thuật — kỹ năng dùng luôn cho bài luận săn học bổng.</p></div>
+    <div class="cell hero-cell">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5M22 9v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <h3>Mạnh hồ sơ du học &amp; học bổng</h3>
+      <p>AP là thước đo “dám học khó”. Bộ hồ sơ Merit chuẩn 2026: GPA 8.5+, IELTS 6.5–7.5, SAT 1450+, 3–5 AP điểm 4–5.</p>
+    </div>
+    <div class="cell">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+      <h3>Đổi tín chỉ, nhẹ năm nhất</h3>
+      <p>Calculus BC, Chemistry, CSA quy đổi trực tiếp sang các môn đại cương ở hàng trăm trường công.</p>
+    </div>
+    <div class="cell">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19l-4 1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 6.5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <h3>Viết luận tốt hơn</h3>
+      <p>AP English Language rèn viết học thuật — dùng luôn cho bài luận săn học bổng.</p>
+    </div>
   </div>
 </div></section>
 
 <section class="block reveal" id="mon-hoc"><div class="panel">
-  <div class="sec-head"><h2>5 môn AP của trường — chi tiết như web luyện thi chuẩn</h2>
-  <p>Bấm từng tab: nội dung, cấu trúc đề, nền tảng cần có, học liệu gợi ý theo chuẩn College Board, Khan Academy, UWorld, Barron's.</p></div>
-  <div class="tabs" id="courseTabs">
-    <button data-c="toan" class="active">AP Toán</button>
-    <button data-c="ly">AP Vật lý</button>
-    <button data-c="hoa">AP Hóa học</button>
-    <button data-c="tin">AP Tin học</button>
-    <button data-c="anh">AP Tiếng Anh</button>
+  <div class="sec-head">
+    <div class="sec-kicker">Chương trình học</div>
+    <h2>5 môn AP của trường, chi tiết tới từng dạng đề</h2>
+    <p>Bấm từng tab: nội dung, cấu trúc đề, ai nên học và học liệu gợi ý theo chuẩn College Board, Khan Academy, UWorld, Barron's.</p>
+  </div>
+  <div class="tabs" id="courseTabs" role="tablist">
+    <button data-c="toan" class="active" role="tab">AP Toán</button>
+    <button data-c="ly" role="tab">AP Vật lý</button>
+    <button data-c="hoa" role="tab">AP Hóa học</button>
+    <button data-c="tin" role="tab">AP Tin học</button>
+    <button data-c="anh" role="tab">AP Tiếng Anh</button>
   </div>
 
-  <div class="course active" id="c-toan">
+  <div class="course active" id="c-toan" role="tabpanel">
     <h3>AP Toán — Calculus AB / BC</h3>
-    <div class="meta"><span>Tương đương Calc I (AB) / Calc I+II (BC)</span><span>Thi: 45 trắc nghiệm + 6 tự luận · 3h15</span><span>BC có AB Subscore “cứu điểm”</span></div>
-    <div class="cols2"><div><b>Học gì?</b><ul><li>Giới hạn, đạo hàm, tích phân, phương trình vi phân</li><li>BC thêm: tham số, tọa độ cực, chuỗi vô hạn (17–18% đề)</li><li>Thi hybrid digital qua Bluebook, tự luận viết tay</li></ul></div>
-    <div><b>Ai nên học?</b><ul><li>Mọi ngành STEM: chọn <b>BC</b></li><li>XHNV/Kinh tế nhẹ: <b>AB</b> là đủ</li><li>Nền: Precalculus/Đại số chắc</li><li>Luyện: Khan Academy (miễn phí) + FRQ College Board + UWorld/Barron's</li></ul></div></div>
+    <div class="meta"><span>Tương đương Calc I (AB) / Calc I+II (BC)</span><span>45 trắc nghiệm + 6 tự luận · 3h15</span><span>BC có AB Subscore “cứu điểm”</span></div>
+    <div class="cols2"><div><h4>Học gì</h4><ul><li>Giới hạn, đạo hàm, tích phân, phương trình vi phân</li><li>BC thêm: tham số, tọa độ cực, chuỗi vô hạn (17–18% đề)</li><li>Thi hybrid digital qua Bluebook, tự luận viết tay</li></ul></div>
+    <div><h4>Ai nên học</h4><ul><li>Mọi ngành STEM: chọn <b>BC</b></li><li>XHNV, Kinh tế nhẹ: <b>AB</b> là đủ</li><li>Nền: Precalculus và Đại số chắc</li><li>Luyện: Khan Academy (miễn phí) + FRQ College Board + UWorld</li></ul></div></div>
   </div>
-  <div class="course" id="c-ly">
+  <div class="course" id="c-ly" role="tabpanel">
     <h3>AP Vật lý — Physics 1 · 2 · C (Mechanics + E&amp;M)</h3>
     <div class="meta"><span>1–2: đại số, không cần Calculus</span><span>C: giải tích, chuẩn kỹ sư (2 học phần)</span><span>Top kỹ thuật chỉ nhận C</span></div>
-    <div class="cols2"><div><b>Học gì?</b><ul><li>Physics 1: cơ học · Physics 2: điện-từ-nhiệt-lượng tử</li><li>Physics C: cơ + điện-từ bằng vi tích phân, sâu gấp đôi</li><li>Yale/MIT: C cần điểm 5 mới đổi credit</li></ul></div>
-    <div><b>Ai nên học?</b><ul><li>Kỹ thuật/CNTT: <b>Physics C</b> (song song Calculus)</li><li>Pre-med/Kinh tế: <b>Physics 1 (+2)</b> là chuẩn</li><li>Luyện: Khan Academy + AP Classroom + đề C của College Board</li></ul></div></div>
+    <div class="cols2"><div><h4>Học gì</h4><ul><li>Physics 1: cơ học · Physics 2: điện-từ-nhiệt-lượng tử</li><li>Physics C: cơ + điện-từ bằng vi tích phân, sâu gấp đôi</li><li>Yale, MIT: môn C cần điểm 5 mới đổi credit</li></ul></div>
+    <div><h4>Ai nên học</h4><ul><li>Kỹ thuật, CNTT: <b>Physics C</b> (song song Calculus)</li><li>Pre-med, Kinh tế: <b>Physics 1 (+2)</b> là chuẩn</li><li>Luyện: Khan Academy + AP Classroom + đề C của College Board</li></ul></div></div>
   </div>
-  <div class="course" id="c-hoa">
+  <div class="course" id="c-hoa" role="tabpanel">
     <h3>AP Hóa học — Chemistry</h3>
-    <div class="meta"><span>Tương đương Gen Chem I (+II nếu điểm 5)</span><span>Thi: trắc nghiệm + tự luận tính toán + lab</span><span>Điểm 4–5 mới chắc credit STEM</span></div>
-    <div class="cols2"><div><b>Học gì?</b><ul><li>Cấu tạo nguyên tử, liên kết, nhiệt hóa, cân bằng, acid-base, điện hóa</li><li>Nặng lab + suy luận số liệu thí nghiệm</li></ul></div>
-    <div><b>Ai nên học?</b><ul><li>Y-Dược-Sinh-Hóa, Kỹ thuật hóa: <b>bắt buộc</b></li><li>Lưu ý med school: vẫn phải học lại Organic/Biochem ở ĐH</li><li>Luyện: Khan Academy + lab AP Classroom + Princeton Review/Kaplan</li></ul></div></div>
+    <div class="meta"><span>Tương đương Gen Chem I (+II nếu điểm 5)</span><span>Trắc nghiệm + tự luận tính toán + lab</span><span>Điểm 4–5 mới chắc credit STEM</span></div>
+    <div class="cols2"><div><h4>Học gì</h4><ul><li>Nguyên tử, liên kết, nhiệt hóa, cân bằng, acid-base, điện hóa</li><li>Nặng lab và suy luận số liệu thí nghiệm</li></ul></div>
+    <div><h4>Ai nên học</h4><ul><li>Y-Dược-Sinh-Hóa, Kỹ thuật hóa: <b>bắt buộc</b></li><li>Lưu ý med school: vẫn học tiếp Organic, Biochem ở đại học</li><li>Luyện: Khan Academy + lab AP Classroom + Princeton Review</li></ul></div></div>
   </div>
-  <div class="course" id="c-tin">
-    <h3>AP Tin học — CSP (rộng) / CSA - Java (sâu)</h3>
+  <div class="course" id="c-tin" role="tabpanel">
+    <h3>AP Tin học — CSP (rộng) / CSA Java (sâu)</h3>
     <div class="meta"><span>CSP: nhập môn, không cần biết code</span><span>CSA: lập trình Java = CS101</span><span>CSA được nhận rộng gấp đôi CSP</span></div>
-    <div class="cols2"><div><b>Học gì?</b><ul><li>CSP: dữ liệu, internet, thuật toán, tác động xã hội + bài Create Task (30%)</li><li>CSA: Java, OOP, mảng/ArrayList, đệ quy · 40 MCQ + 4 FRQ code</li></ul></div>
-    <div><b>Ai nên học?</b><ul><li>Theo CNTT: <b>CSA bắt buộc</b></li><li>Mới học/ngoài ngành: <b>CSP trước, CSA sau</b></li><li>Luyện: Khan Academy, UWorld, Barron's CSA</li></ul></div></div>
+    <div class="cols2"><div><h4>Học gì</h4><ul><li>CSP: dữ liệu, internet, thuật toán, tác động xã hội + bài Create Task (30%)</li><li>CSA: Java, OOP, mảng và ArrayList, đệ quy · 40 MCQ + 4 FRQ code</li></ul></div>
+    <div><h4>Ai nên học</h4><ul><li>Theo CNTT: <b>CSA bắt buộc</b></li><li>Mới học hoặc ngoài ngành: <b>CSP trước, CSA sau</b></li><li>Luyện: Khan Academy, UWorld, Barron's CSA</li></ul></div></div>
   </div>
-  <div class="course" id="c-anh">
+  <div class="course" id="c-anh" role="tabpanel">
     <h3>AP Tiếng Anh — Language / Literature</h3>
-    <div class="meta"><span>Lang: viết luận &amp; hùng biện</span><span>Lit: phân tích văn học</span><span>Cần nền IELTS ~6.5+</span></div>
-    <div class="cols2"><div><b>Học gì?</b><ul><li>Lang: 55 MCQ rhetoric + 3 essay — đổi Freshman Writing</li><li>Lit: thơ, truyện, kịch + 3 essay phân tích — đổi Literature</li><li>Nhiều Ivy giữ môn Writing riêng dù điểm 5</li></ul></div>
-    <div><b>Ai nên học?</b><ul><li>Kinh tế/Luật/XHNV: <b>Lang trước</b>, thêm Lit nếu mê văn</li><li>Nhóm du học + tiếng Anh tốt: nên đăng ký thêm 1 môn này</li></ul></div></div>
+    <div class="meta"><span>Lang: viết luận và hùng biện</span><span>Lit: phân tích văn học</span><span>Cần nền IELTS khoảng 6.5+</span></div>
+    <div class="cols2"><div><h4>Học gì</h4><ul><li>Lang: câu hỏi rhetoric + 3 essay — đổi môn Freshman Writing</li><li>Lit: thơ, truyện, kịch + 3 essay phân tích — đổi môn Literature</li><li>Nhiều Ivy giữ môn Writing riêng dù điểm 5</li></ul></div>
+    <div><h4>Ai nên học</h4><ul><li>Kinh tế, Luật, XHNV: <b>Lang trước</b>, thêm Lit nếu mê văn</li><li>Nhóm du học + tiếng Anh tốt: nên đăng ký thêm 1 môn này</li></ul></div></div>
   </div>
 </div></section>
 
 <section class="block reveal" id="so-sanh"><div class="panel">
-  <div class="sec-head"><h2>Đừng chọn nhầm — 4 cặp hay nhầm nhất</h2>
-  <p>Tổng hợp từ tư vấn của College Board, CollegeVine và các trung tâm lớn.</p></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Tránh chọn nhầm</div>
+    <h2>4 cặp môn hay nhầm nhất</h2>
+    <p>Tổng hợp từ tư vấn của College Board, CollegeVine và các trung tâm luyện thi lớn.</p>
+  </div>
   <div class="table-scroll"><table>
     <thead><tr><th>Cặp phân vân</th><th>Chọn A khi…</th><th>Chọn B khi…</th><th>Chuẩn quy đổi</th></tr></thead>
     <tbody>
-      <tr><th>Calculus AB vs BC</th><td>Muốn chắc, học vừa sức, chỉ cần Calc I</td><td>Theo STEM, muốn 8 tín chỉ + AB Subscore dự phòng</td><td>BC giá trị gấp đôi cho kỹ thuật</td></tr>
-      <tr><th>Physics 1/2 vs C</th><td>Pre-med, Kinh tế, chưa học Calculus</td><td>Kỹ thuật/CNTT, đang học Calculus</td><td>Ngành kỹ thuật chỉ tính C</td></tr>
-      <tr><th>CSP vs CSA</th><td>Mới học code, ngành ngoài CNTT</td><td>Theo CNTT, cần CS101, đã có tư duy logic</td><td>CSA ≈ 551+ trường nhận điểm 4+; CSP ≈ 281</td></tr>
-      <tr><th>Lang vs Lit</th><td>Cần viết luận, Kinh tế/Luật/KHXH</td><td>Mê văn, nhắm Văn/Sử/Truyền thông</td><td>Học cả 2 nếu theo nhân văn (Lang lớp 11, Lit lớp 12)</td></tr>
+      <tr><th>Calculus AB / BC</th><td>Muốn chắc, học vừa sức, chỉ cần Calc I</td><td>Theo STEM, muốn 8 tín chỉ + AB Subscore dự phòng</td><td>BC giá trị gấp đôi cho kỹ thuật</td></tr>
+      <tr><th>Physics 1-2 / C</th><td>Pre-med, Kinh tế, chưa học Calculus</td><td>Kỹ thuật, CNTT, đang học Calculus</td><td>Ngành kỹ thuật chỉ tính C</td></tr>
+      <tr><th>CSP / CSA</th><td>Mới học code, ngành ngoài CNTT</td><td>Theo CNTT, cần CS101, tư duy logic tốt</td><td>CSA ≈ 551+ trường nhận điểm 4+; CSP ≈ 281</td></tr>
+      <tr><th>Lang / Lit</th><td>Cần viết luận: Kinh tế, Luật, KHXH</td><td>Mê văn: Văn, Sử, Truyền thông</td><td>Theo nhân văn: Lang lớp 11, Lit lớp 12</td></tr>
     </tbody>
   </table></div>
 </div></section>
 
 <section class="block reveal" id="lo-trinh"><div class="panel">
-  <div class="sec-head"><h2>Lộ trình 4 bước — từ đăng ký tới gửi điểm</h2>
-  <p>Theo quy trình thi AP chuẩn: đăng ký thu → học tại trường → thi tháng 5 → gửi điểm qua College Board.</p></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Lộ trình</div>
+    <h2>4 bước — từ đăng ký tới gửi điểm</h2>
+    <p>Đúng quy trình thi AP chuẩn: đăng ký thu, học tại trường, thi tháng 5, gửi điểm qua College Board.</p>
+  </div>
   <div class="steps">
-    <div class="step"><b class="num">1</b><h3>Đăng ký tại lớp (48h)</h3><p>Mở link của trường, tick 2–3 môn đúng ngành. Nhóm du học + tiếng Anh tốt đăng ký thêm 1 AP.</p></div>
-    <div class="step"><b class="num">2</b><h3>Học + luyện đề</h3><p>Học cùng thầy cô + AP Classroom; cày FRQ các năm + Khan Academy miễn phí.</p></div>
-    <div class="step"><b class="num">3</b><h3>Thi tháng 5 (1–5)</h3><p>Trắc nghiệm trên Bluebook, tự luận viết tay. Nhắm 3+ (trường công), 4–5 (trường top).</p></div>
-    <div class="step"><b class="num">4</b><h3>Gửi điểm chính thức</h3><p>Chủ động gửi qua College Board về trường ĐH (không tự động). Tra cứu trước bằng AP Credit Policy Search.</p></div>
+    <div class="step" data-d="0"><span class="num">1</span><h3>Đăng ký tại lớp</h3><p>Mở link của trường, tick 2–3 môn đúng ngành trong 48h. Nhóm du học + tiếng Anh tốt đăng ký thêm 1 AP.</p></div>
+    <div class="step" data-d="1"><span class="num">2</span><h3>Học + luyện đề</h3><p>Học cùng thầy cô và AP Classroom; cày FRQ các năm và Khan Academy miễn phí.</p></div>
+    <div class="step" data-d="2"><span class="num">3</span><h3>Thi tháng 5</h3><p>Trắc nghiệm trên Bluebook, tự luận viết tay. Nhắm 3+ (trường công), 4–5 (trường top).</p></div>
+    <div class="step" data-d="3"><span class="num">4</span><h3>Gửi điểm chính thức</h3><p>Chủ động gửi qua College Board về trường đại học. Tra cứu trước bằng AP Credit Policy Search.</p></div>
   </div>
 </div></section>
 
 <section class="block reveal" id="tra-cuu"><div class="panel">
-  <div class="sec-head"><h2>Tra cứu combo theo ngành của em</h2>
-  <p>Bấm vào định hướng để xem gợi ý đăng ký kỳ này.</p></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Công cụ tra cứu</div>
+    <h2>Combo theo ngành của em</h2>
+    <p>Bấm vào định hướng để xem gợi ý đăng ký kỳ này.</p>
+  </div>
   <div class="combo-btns" id="comboBtns">
     <button data-k="kythuat" class="active">Kỹ thuật</button>
     <button data-k="it">CNTT / AI / Data</button>
@@ -247,78 +377,186 @@ footer{color:var(--muted);font-size:13px;padding:22px 0 34px;text-align:center}
     <button data-k="xahoi">Luật-XHNV-Truyền thông</button>
     <button data-k="chuabiet">Chưa rõ + săn học bổng</button>
   </div>
-  <div id="comboBox"></div>
-  <div style="margin-top:14px" class="table-scroll"><table>
+  <div id="comboBox" role="status"></div>
+  <div style="margin-top:20px" class="table-scroll"><table>
     <thead><tr><th>Nhóm ngành</th><th>Toán</th><th>Lý</th><th>Hóa</th><th>Tin</th><th>Anh</th></tr></thead>
     <tbody>
-      <tr><th>Kỹ thuật</th><td><span class="pill p1">BC</span></td><td><span class="pill p1">C đôi</span></td><td><span class="pill p2">Nên</span></td><td><span class="pill p2">CSA</span></td><td><span class="pill p2">Lang</span></td></tr>
-      <tr><th>CNTT/AI/Data</th><td><span class="pill p1">BC</span></td><td><span class="pill p1">C Mech</span></td><td><span class="pill p0">–</span></td><td><span class="pill p1">CSA</span></td><td><span class="pill p2">Nên</span></td></tr>
-      <tr><th>Y-Dược-Sinh</th><td><span class="pill p1">AB/BC</span></td><td><span class="pill p2">1+2</span></td><td><span class="pill p1">Chem</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang</span></td></tr>
-      <tr><th>Kinh tế-TC</th><td><span class="pill p1">BC</span></td><td><span class="pill p2">1</span></td><td><span class="pill p0">–</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang</span></td></tr>
-      <tr><th>Luật-XHNV</th><td><span class="pill p2">AB</span></td><td><span class="pill p2">1</span></td><td><span class="pill p0">–</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang+Lit</span></td></tr>
+      <tr><th>Kỹ thuật</th><td><span class="pill p1">BC</span></td><td><span class="pill p1">C đôi</span></td><td><span class="pill p2">Nên học</span></td><td><span class="pill p2">CSA</span></td><td><span class="pill p2">Lang</span></td></tr>
+      <tr><th>CNTT / AI / Data</th><td><span class="pill p1">BC</span></td><td><span class="pill p1">C Mech</span></td><td><span class="pill p0">Không cần</span></td><td><span class="pill p1">CSA</span></td><td><span class="pill p2">Nên học</span></td></tr>
+      <tr><th>Y-Dược-Sinh</th><td><span class="pill p1">AB / BC</span></td><td><span class="pill p2">1 + 2</span></td><td><span class="pill p1">Chem</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang</span></td></tr>
+      <tr><th>Kinh tế-Tài chính</th><td><span class="pill p1">BC</span></td><td><span class="pill p2">Physics 1</span></td><td><span class="pill p0">Không cần</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang</span></td></tr>
+      <tr><th>Luật-XHNV</th><td><span class="pill p2">AB</span></td><td><span class="pill p2">Physics 1</span></td><td><span class="pill p0">Không cần</span></td><td><span class="pill p2">CSP</span></td><td><span class="pill p1">Lang + Lit</span></td></tr>
     </tbody>
   </table></div>
 </div></section>
 
 <section class="block reveal"><div class="panel">
-  <div class="sec-head"><h2>Trường nào hợp combo nào?</h2>
-  <p>3 tầng để thầy cô tư vấn nhanh. Quy tắc chung: trường càng top, điểm yêu cầu càng cao và càng thiên về “học vượt” thay vì trừ tín chỉ.</p></div>
-  <div class="tiers">
-    <div class="tier-card"><h3>Ivy + MIT / Stanford</h3><p>Cần <b>điểm 5</b>, chủ yếu <b>placement</b>. Học AP để <b>mạnh hồ sơ</b>.</p><small>VD: Harvard, Yale, Princeton, MIT, Stanford, Columbia, Penn.</small></div>
-    <div class="tier-card"><h3>Tư thục chọn lọc</h3><p>Cần <b>4–5</b>, cho <b>credit + placement</b> tới 30 tín chỉ, <b>tiết kiệm $10k–30k</b>.</p><small>VD: NYU, Northeastern, JHU, Northwestern, Rice.</small></div>
-    <div class="tier-card featured"><h3>Công lập flagship ★</h3><p><b>Điểm 3 đã có credit</b>. Đích săn Merit tốt nhất cho HS Việt Nam.</p><small>VD: UC Berkeley/UCLA, Michigan, UT Austin, Florida, ASU, Georgia Tech, Purdue.</small></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Điểm đến · Nước Mỹ</div>
+    <h2>Trường Mỹ nào hợp combo nào</h2>
+    <p>Ba tầng để thầy cô tư vấn nhanh. Trường càng top, điểm yêu cầu càng cao và càng thiên về “học vượt” thay vì trừ tín chỉ. Muốn đi Anh, Canada, Úc, Singapore, châu Âu? Xem tiếp phần <a href="#du-hoc">Du học toàn cầu</a> bên dưới.</p>
   </div>
-  <p><small>Lưu ý Y khoa: nhiều med school không nhận AP thay prerequisite — dùng AP để xếp lớp cao + học thêm lab nâng cao. Luôn tra cứu <b>College Board AP Credit Policy Search</b> theo từng khoa.</small></p>
+  <div class="tiers">
+    <div class="tier-card"><span class="tier-tag">Tầng 1 · Siêu chọn lọc</span><h3>Ivy + MIT / Stanford</h3><p>Cần <b>điểm 5</b>, chủ yếu <b>placement</b> (học vượt). Học AP để <b>mạnh hồ sơ</b>.</p><small>VD: Harvard, Yale, Princeton, MIT, Stanford, Columbia, Penn.</small></div>
+    <div class="tier-card"><span class="tier-tag">Tầng 2 · Chọn lọc</span><h3>Tư thục học bổng tốt</h3><p>Cần <b>4–5</b>, cho <b>credit + placement</b> tới 30 tín chỉ, <b>tiết kiệm $10k–30k</b>.</p><small>VD: NYU, Northeastern, Johns Hopkins, Northwestern, Rice.</small></div>
+    <div class="tier-card featured"><span class="tier-tag">Tầng 3 · Săn Merit tốt nhất</span><h3>Công lập flagship</h3><p><b>Điểm 3 đã có credit</b>. Đích ngắm thực dụng nhất cho học sinh Việt Nam.</p><small>VD: UC Berkeley, UCLA, Michigan, UT Austin, Florida, ASU, Georgia Tech, Purdue.</small></div>
+  </div>
+  <p style="font-size:13.5px;color:var(--muted);margin:16px 0 0">Lưu ý Y khoa: nhiều med school không nhận AP thay prerequisite — dùng AP để xếp lớp cao rồi học thêm lab nâng cao. Luôn tra cứu <b>College Board AP Credit Policy Search</b> theo từng khoa.</p>
+</div></section>
+
+<section class="block reveal" id="du-hoc"><div class="panel">
+  <div class="sec-head">
+    <div class="sec-kicker">AP · Hộ chiếu toàn cầu</div>
+    <h2>Du học toàn cầu: AP có giá trị ở đâu</h2>
+    <p>College Board xác nhận <b>500+ trường tại 75+ quốc gia</b> công nhận AP — nhưng mỗi nước dùng AP một kiểu: Mỹ đổi tín chỉ, Anh và Singapore lấy làm <b>điều kiện trúng tuyển</b>, Canada và Úc vừa xét tuyển vừa cho credit. Bấm từng khu vực để xem yêu cầu cụ thể.</p>
+  </div>
+  <div class="tabs" id="regionTabs" role="tablist">
+    <button data-r="anh" class="active" role="tab">Anh</button>
+    <button data-r="canada" role="tab">Canada</button>
+    <button data-r="uc" role="tab">Úc &amp; NZ</button>
+    <button data-r="sing" role="tab">Singapore</button>
+    <button data-r="eu" role="tab">Châu Âu</button>
+  </div>
+
+  <div class="course active" id="r-anh" role="tabpanel">
+    <h3>Vương quốc Anh — AP thay A-Level, cắt điểm rất gắt</h3>
+    <div class="meta"><span>Oxford: 3–4 AP toàn điểm 5</span><span>Cambridge: 5 AP điểm 5</span><span>Imperial: 3–4 AP điểm 5</span></div>
+    <div class="cols2"><div><h4>Yêu cầu điển hình</h4><ul><li>AP được xem như A-Level; <b>điểm 5 ≈ A*/A, 4 ≈ B</b> — thiếu điểm chuẩn là trượt, không “xét tổng thể” như Mỹ</li><li>Oxford, Cambridge, Imperial, LSE, UCL: gói <b>3–5 AP điểm 5 đúng ngành</b> + personal statement + bài thi riêng + phỏng vấn</li><li>KCL, Edinburgh, Bristol, Cardiff: <b>2–5 AP điểm 4–5</b> tùy ngành</li><li>SAT <b>không thay được AP</b>; hạn Oxbridge và Y khoa: <b>15/10</b> (cần điểm dự báo)</li></ul></div>
+    <div><h4>Môn nào được trọng</h4><ul><li>STEM: <b>Calculus BC bắt buộc</b> + Physics C, Chemistry, Biology</li><li>Kinh tế: Micro + Macro (điểm 5 cả hai) + Calc BC quan trọng hơn cả</li><li>Nhân văn: English Literature điểm 5; CS: Oxbridge <b>không đòi</b> kinh nghiệm code</li><li>5 môn của trường phủ đủ bộ hồ sơ Anh cho mọi khối ngành</li></ul></div></div>
+  </div>
+  <div class="course" id="r-canada" role="tabpanel">
+    <h3>Canada — thoáng nhất: vừa xét tuyển, vừa cho credit</h3>
+    <div class="meta"><span>UBC: 5 = 96% · 4 = 86%</span><span>Credit từ điểm 4</span><span>3–4 AP là đẹp</span></div>
+    <div class="cols2"><div><h4>Xét tuyển</h4><ul><li>Mọi môn AP đều được tính; điểm AP cộng với học bạ để ra điểm xét tuyển</li><li>Toronto, McGill, UBC, Waterloo, Alberta, Queen's đều nhận AP</li><li>Waterloo (Engineering, CS): AP giúp miễn môn nền, lợi thế lớn</li></ul></div>
+    <div><h4>Tín chỉ</h4><ul><li><b>UBC cho credit năm nhất từ điểm 4</b> trở lên (trừ Capstone)</li><li>Waterloo xét miễn môn từ điểm 4; McGill cho credit với điểm cao</li><li>Con đường “ngon-bổ-rẻ”: học phí thấp hơn Mỹ, vẫn quy đổi AP</li></ul></div></div>
+  </div>
+  <div class="course" id="r-uc" role="tabpanel">
+    <h3>Úc &amp; New Zealand — xét tuyển bằng AP, credit theo khoa</h3>
+    <div class="meta"><span>Melbourne: GPA 3.2+ và 3–4 AP</span><span>ANU · UNSW · Sydney xét + miễn môn</span><span>Điểm 4–5 mới chắc</span></div>
+    <div class="cols2"><div><h4>Xét tuyển</h4><ul><li>Melbourne, ANU, UNSW, Sydney, Queensland, Auckland đều nhận AP để xét tuyển</li><li>Ví dụ Melbourne: GPA 3.2+ kết hợp tổng điểm AP theo bảng quy đổi ATAR</li><li>AP đúng ngành (Calc cho Engineering, Micro cho Commerce) được đánh giá cao</li></ul></div>
+    <div><h4>Tín chỉ</h4><ul><li>Xét <b>theo từng khoa</b>: UNSW Engineering, Melbourne Commerce có thể miễn môn năm nhất</li><li>Ít hào phóng hơn Mỹ và Canada — nhưng transcript có AP vẫn cộng điểm hồ sơ và học bổng</li></ul></div></div>
+  </div>
+  <div class="course" id="r-sing" role="tabpanel">
+    <h3>Singapore — NUS, NTU yêu cầu AP rất rõ ràng</h3>
+    <div class="meta"><span>NTU: 3+ AP điểm 4–5 (đa số đỗ có 4+ AP)</span><span>NUS CS: SAT 1500+ và 4 AP điểm 5</span><span>Gửi điểm trước 15/7</span></div>
+    <div class="cols2"><div><h4>NTU — khung cứng theo ngành</h4><ul><li><b>Engineering: Calculus BC + Physics C bắt buộc</b>; Khoa học và Applied Computing: Calc BC bắt buộc</li><li>Sinh học: Biology + Chemistry; Business: Statistics hoặc Calculus</li><li>Thiếu đúng môn là loại thẳng, bất kể GPA và SAT</li><li>Điểm AP phải tới trường trước <b>15/7</b>; không xét offer có điều kiện</li></ul></div>
+    <div><h4>NUS — cạnh tranh theo ngành</h4><ul><li>Bằng THPT + SAT/ACT + AP; AP gửi trước <b>9/7</b></li><li>Tham chiếu: CS khoảng SAT 1500 + 4 AP 5; Business khoảng 1450 + 3–4 AP 5</li><li>IELTS 6.5+ (không band dưới 6.0); Y, Luật, Nha khắt khe hơn hẳn</li><li>Bộ 5 môn của trường phủ đủ điều kiện mọi khoa NUS, NTU</li></ul></div></div>
+  </div>
+  <div class="course" id="r-eu" role="tabpanel">
+    <h3>Châu Âu — đa số không đòi AP, nhưng AP là điểm cộng</h3>
+    <div class="meta"><span>Hà Lan · Đức · Ý · Bắc Âu: SAT là đủ</span><span>Ireland: 3–4 AP điểm 4–5</span></div>
+    <div class="cols2"><div><h4>Không bắt buộc AP</h4><ul><li>Hà Lan, Đức, Ý, Scandinavia: bằng THPT + SAT thường đã đủ điều kiện</li><li>Học phí công lập thấp, nhiều chương trình dạy bằng tiếng Anh</li></ul></div>
+    <div><h4>Ngoại lệ đáng chú ý</h4><ul><li><b>Ireland (Trinity College Dublin): 3–4 AP điểm 4–5</b> + SAT khoảng 1300</li><li>Dù không bắt buộc, AP điểm cao vẫn giúp hồ sơ học bổng nổi bật ở mọi nước</li></ul></div></div>
+  </div>
+  <p style="font-size:13.5px;color:var(--muted);margin:16px 0 0">Nguồn: College Board (International AP Recognition), NTU và NUS Office of Admissions, UBC AP Transfer Credit, College Council 2026, Save My Exams, Oxbridge Mentors. Chính sách đổi theo năm — luôn kiểm tra trang tuyển sinh của từng trường trước khi chốt.</p>
 </div></section>
 
 <section class="block reveal" id="hoc-lieu"><div class="panel">
-  <div class="sec-head"><h2>Học liệu luyện thi theo chuẩn web AP lớn</h2>
-  <p>Tham khảo cấu trúc của Khan Academy, Princeton Review, Kaplan, UWorld, Albert, Barron's — sắp lại thành 2 nhóm cho các em dễ bắt đầu.</p></div>
+  <div class="sec-head">
+    <div class="sec-kicker">Luyện thi</div>
+    <h2>Học liệu theo chuẩn web AP lớn</h2>
+    <p>Cấu trúc của Khan Academy, Princeton Review, Kaplan, UWorld, Albert, Barron's — sắp lại thành 3 nhóm để các em bắt đầu ngay.</p>
+  </div>
   <div class="res-grid">
-    <div class="res free"><h3>Miễn phí — bắt đầu ngay</h3><p><b>Khan Academy AP</b> (đối tác chính thức College Board) · <b>AP Classroom + đề FRQ</b> qua thầy cô · <b>Bluebook</b> thi thử đúng format digital.</p><small>Chuẩn Kahnmigo AI $4/tháng (GV miễn phí). Đủ để tự học tới 4–5 nếu kỷ luật.</small></div>
-    <div class="res free"><h3>Đề thật + ngân hàng câu hỏi</h3><p><b>College Board FRQ</b> các năm có rubric chấm · <b>UWorld AP</b> (được vote cao nhất cho Calc/Chem) · <b>Albert</b> giao diện luyện tập thân thiện.</p><small>Nguyên tắc: cày đề thật trước, sách luyện sau.</small></div>
-    <div class="res paid"><h3>Có phí — khi cần bứt tốc</h3><p><b>Princeton Review</b> Self-Paced ~$299 / tutoring ~$215/h · <b>Kaplan</b> Unlimited Prep · <b>Barron's</b> sách gối đầu cho Calc/Chem/Physics.</p><small>Chỉ mua khi đã hết nguồn miễn phí hoặc cần cam kết điểm + GV kèm.</small></div>
+    <div class="res">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <h3>Miễn phí — bắt đầu ngay</h3><p><b>Khan Academy AP</b> (đối tác chính thức College Board), <b>AP Classroom + đề FRQ</b> qua thầy cô, thi thử <b>Bluebook</b> đúng format digital.</p><small>Đủ để tự học tới 4–5 nếu kỷ luật.</small>
+    </div>
+    <div class="res">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <h3>Đề thật + ngân hàng câu hỏi</h3><p><b>FRQ các năm</b> kèm rubric chấm, <b>UWorld AP</b> (được vote cao nhất cho Calc và Chem), <b>Albert</b> giao diện luyện tập thân thiện.</p><small>Nguyên tắc: cày đề thật trước, sách luyện sau.</small>
+    </div>
+    <div class="res paid">
+      <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+      <h3>Có phí — khi cần bứt tốc</h3><p><b>Princeton Review</b> Self-Paced khoảng $299, <b>Kaplan</b> Unlimited Prep, sách <b>Barron's</b> gối đầu cho Calc, Chem, Physics.</p><small>Chỉ mua khi đã hết nguồn miễn phí hoặc cần cam kết điểm.</small>
+    </div>
   </div>
 </div></section>
 
 <section class="block reveal" id="faq"><div class="panel">
-  <div class="sec-head"><h2>Hỏi nhanh — đáp gọn</h2></div>
-  <details open><summary>Học nhiều AP có chắc nhiều học bổng?</summary><p>Không. 3 AP điểm 5 đúng ngành hơn 6 AP điểm 3 lan man. Trường Mỹ xét tổng thể: GPA + IELTS + SAT + essay + ngoại khóa + thư giới thiệu.</p></details>
-  <details><summary>AP có thay IELTS/SAT không?</summary><p>Không. IELTS/TOEFL vẫn bắt buộc; SAT/ACT vẫn là lợi thế Merit. AP là tầng “độ khó + tín chỉ” cộng thêm.</p></details>
-  <details><summary>Y khoa có nên “xóa” Hóa/Lý bằng AP?</summary><p>Không nên xóa trắng. Dùng AP để xếp lớp cao rồi học thêm môn lab nâng cao (Organic, Biochem), vì med school soi transcript ĐH.</p></details>
-  <details><summary>Điểm 1–2 có sao không?</summary><p>Không có credit nhưng vẫn chứng minh đã dám học khó. Có thể không gửi điểm (withhold) cho trường không yêu cầu.</p></details>
-  <details><summary>Tiếng Anh chưa tốt có nên ôm AP Anh?</summary><p>Chưa nên. Giữ chắc Toán + 1 science trước (IELTS ~6.5+, điểm Anh ≥8.5 hãy thêm Lang).</p></details>
-  <details><summary>Gửi điểm AP thế nào?</summary><p>Chủ động gửi điểm chính thức qua College Board về trường ĐH sau kỳ thi tháng 5 — không tự động cộng.</p></details>
+  <div class="sec-head">
+    <div class="sec-kicker">Giải đáp</div>
+    <h2>Hỏi nhanh — đáp gọn</h2>
+  </div>
+  <details class="faq" open><summary>Học nhiều AP có chắc nhiều học bổng? <span class="plus">+</span></summary><div class="faq-body"><div><p>Không. 3 AP điểm 5 đúng ngành giá trị hơn 6 AP điểm 3 lan man. Trường Mỹ xét tổng thể: GPA, IELTS, SAT, essay, ngoại khóa và thư giới thiệu.</p></div></div></details>
+  <details class="faq"><summary>AP có thay IELTS hoặc SAT không? <span class="plus">+</span></summary><div class="faq-body"><div><p>Không. IELTS/TOEFL vẫn bắt buộc; SAT/ACT vẫn là lợi thế Merit. AP là tầng “độ khó + tín chỉ” cộng thêm.</p></div></div></details>
+  <details class="faq"><summary>Y khoa có nên “xóa” Hóa, Lý bằng AP? <span class="plus">+</span></summary><div class="faq-body"><div><p>Không nên xóa trắng. Dùng AP để xếp lớp cao rồi học thêm môn lab nâng cao (Organic, Biochem), vì med school soi transcript đại học.</p></div></div></details>
+  <details class="faq"><summary>Điểm 1–2 có sao không? <span class="plus">+</span></summary><div class="faq-body"><div><p>Không có credit nhưng vẫn chứng minh đã dám học khó. Có thể không gửi điểm cho trường không yêu cầu.</p></div></div></details>
+  <details class="faq"><summary>Tiếng Anh chưa tốt có nên ôm AP Anh? <span class="plus">+</span></summary><div class="faq-body"><div><p>Chưa nên. Giữ chắc Toán và 1 science trước; khi IELTS khoảng 6.5+, điểm Anh từ 8.5 hãy thêm Language.</p></div></div></details>
+  <details class="faq"><summary>Gửi điểm AP thế nào? <span class="plus">+</span></summary><div class="faq-body"><div><p>Chủ động gửi điểm chính thức qua College Board về trường đại học sau kỳ thi tháng 5 — không tự động cộng.</p></div></div></details>
 </div></section>
 
 <div class="final reveal">
   <h2>Hoàn thành đăng ký sớm để trường xếp lớp</h2>
   <p>Các em tick 2–3 môn đúng ngành. Nhóm du học, săn học bổng và nền tiếng Anh tốt nhớ đăng ký thêm AP phù hợp. Thầy cô nhắc các em điền trong 48h để nhà trường tổng hợp.</p>
-  <a class="btn" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Mở link đăng ký của trường</a>
+  <div class="row">
+    <a class="btn amber" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Mở link đăng ký của trường</a>
+    <a class="btn ghost" style="border-color:#fff;color:#fff;background:transparent" href="#tra-cuu">Xem lại combo ngành</a>
+  </div>
+  <small>Điểm AP tính theo kỳ thi tháng 5 (thang 1–5), không phải điểm trên lớp.</small>
 </div>
 
-<footer>Tham khảo cấu trúc &amp; nội dung từ: College Board AP Central (apcentral.collegeboard.org) · Khan Academy AP · Princeton Review AP · Kaplan AP · UWorld AP · Albert.io · Barron's · Bảng AP Guidelines (Michigan, UC Berkeley, Minnesota, Duke, Cornell) · File chi tiết: 01_BaoCao_TuVan_AP.md</footer>
+</div><!-- /wrap -->
+
+<footer class="site"><div class="wrap">
+  <div>
+    <h4>AP tại Trường · 2026</h4>
+    <p>Trang tư vấn đăng ký 5 môn AP: Toán, Vật lý, Hóa học, Tin học, Tiếng Anh. Một file duy nhất, mở là chạy — dùng để chiếu lớp, gửi Zalo phụ huynh hoặc in phát tay.</p>
+  </div>
+  <div>
+    <h4>Nguồn tham khảo</h4>
+    <ul>
+      <li><a href="https://apcentral.collegeboard.org" target="_blank" rel="noopener">College Board AP Central</a></li>
+      <li><a href="https://www.khanacademy.org/test-prep/ap-courses" target="_blank" rel="noopener">Khan Academy AP</a></li>
+      <li><a href="https://apstudents.collegeboard.org" target="_blank" rel="noopener">AP Students + Credit Policy Search</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Đăng ký</h4>
+    <ul>
+      <li><a href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Link đăng ký của trường</a></li>
+      <li><a href="#du-hoc">Du học toàn cầu</a></li>
+      <li><a href="#faq">Câu hỏi thường gặp</a></li>
+      <li><a href="#hoc-lieu">Học liệu luyện thi</a></li>
+    </ul>
+  </div>
 </div>
+<div class="copyright">Đối chiếu bảng AP Guidelines (Michigan · UC Berkeley · Minnesota · Duke · Cornell) và cẩm nang săn học bổng Mỹ 2026 · File chi tiết: 01_BaoCao_TuVan_AP.md</div>
+</footer>
 
 <script>
 var courseTabs=document.querySelectorAll("#courseTabs button");
 courseTabs.forEach(function(b){b.addEventListener("click",function(){
-  courseTabs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");
+  courseTabs.forEach(function(x){x.classList.remove("active");x.setAttribute("aria-selected","false")});
+  b.classList.add("active");b.setAttribute("aria-selected","true");
   document.querySelectorAll(".course").forEach(function(c){c.classList.remove("active")});
   document.getElementById("c-"+b.dataset.c).classList.add("active");
 })});
 var comboData={
-kythuat:"<b>Combo Kỹ sư:</b> <b>Toán BC + Lý (hướng C) + Tin CSA</b>, thêm Hóa nếu theo Hóa dầu/Vật liệu/Môi trường. Lưu ý: Physics 1/2 không thay được C; học C phải song song Calculus.",
-it:"<b>Combo CNTT/AI/Data:</b> <b>Tin CSA + Toán BC + Lý C: Mechanics</b>. Chưa biết code thì học CSP trước rồi lên CSA — CSA mới đổi được CS101.",
-yduoc:"<b>Combo Y-Dược:</b> <b>Hóa + Toán AB/BC + Anh Lang + Lý 1+2</b>. AP 5 vẫn phải học Organic/Biochem ở ĐH — dùng AP để xếp lớp cao, đừng xóa trắng.",
-kinhte:"<b>Combo Kinh tế:</b> <b>Toán BC + Anh Lang + Tin CSP</b> (+ Lý 1 cho nhẹ science). Top business thích định lượng + viết luận.",
-xahoi:"<b>Combo Luật/XHNV:</b> <b>Anh Lang (+ Lit nếu mê văn) + Toán AB + Tin CSP</b>. Điểm 4–5 là bằng chứng viết học thuật mạnh cho essay săn học bổng.",
-chuabiet:"<b>Combo an toàn săn học bổng:</b> <b>Toán + Anh + 1 science nhẹ (Lý 1 / Hóa / CSP)</b>. Giữ 2 AP điểm cao hơn ôm 4 AP điểm thấp."};
+kythuat:"<b>Combo Kỹ sư:</b> <b>Toán BC + Lý (hướng C) + Tin CSA</b>, thêm Hóa nếu theo Hóa dầu, Vật liệu hoặc Môi trường. Lưu ý: Physics 1/2 không thay được C; học C phải song song Calculus.",
+it:"<b>Combo CNTT / AI / Data:</b> <b>Tin CSA + Toán BC + Lý C: Mechanics</b>. Chưa biết code thì học CSP trước rồi lên CSA — CSA mới đổi được CS101.",
+yduoc:"<b>Combo Y-Dược:</b> <b>Hóa + Toán AB/BC + Anh Language + Lý 1+2</b>. AP điểm 5 vẫn phải học Organic và Biochem ở đại học — dùng AP để xếp lớp cao, đừng xóa trắng.",
+kinhte:"<b>Combo Kinh tế:</b> <b>Toán BC + Anh Language + Tin CSP</b> (thêm Lý 1 cho nhẹ science). Top business thích định lượng và viết luận.",
+xahoi:"<b>Combo Luật / XHNV:</b> <b>Anh Language (+ Lit nếu mê văn) + Toán AB + Tin CSP</b>. Điểm 4–5 là bằng chứng viết học thuật mạnh cho essay săn học bổng.",
+chuabiet:"<b>Combo an toàn săn học bổng:</b> <b>Toán + Anh + 1 science nhẹ (Lý 1 / Hóa / CSP)</b>. Giữ 2 AP điểm cao tốt hơn ôm 4 AP điểm thấp."};
 var comboBtns=document.querySelectorAll("#comboBtns button");var comboBox=document.getElementById("comboBox");
 function renderCombo(k){comboBox.innerHTML=comboData[k];comboBtns.forEach(function(b){b.classList.toggle("active",b.dataset.k===k)})}
 comboBtns.forEach(function(b){b.addEventListener("click",function(){renderCombo(b.dataset.k)})});
 renderCombo("kythuat");
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+var regionTabs=document.querySelectorAll("#regionTabs button");
+regionTabs.forEach(function(b){b.addEventListener("click",function(){
+  regionTabs.forEach(function(x){x.classList.remove("active");x.setAttribute("aria-selected","false")});
+  b.classList.add("active");b.setAttribute("aria-selected","true");
+  ["anh","canada","uc","sing","eu"].forEach(function(k){document.getElementById("r-"+k).classList.remove("active")});
+  document.getElementById("r-"+b.dataset.r).classList.add("active");
+})});
+var counters=document.querySelectorAll("[data-count]");
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);
+  var el=e.target,end=parseInt(el.dataset.count,10),t0=null;
+  function tick(t){if(!t0)t0=t;var p=Math.min((t-t0)/900,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)}
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=end}else{requestAnimationFrame(tick)}})},{threshold:.5});
+counters.forEach(function(el){cio.observe(el)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
 </script>
 </body>
