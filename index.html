@@ -199,6 +199,8 @@ footer.site a{color:#fff}
 @keyframes logoScroll{to{transform:translateX(-50%)}}
 .logo-item{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--line);background:var(--bg);border-radius:var(--r-pill);padding:7px 18px 7px 8px;font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--ink);white-space:nowrap}
 .mono{width:32px;height:32px;border-radius:50%;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:11px;font-style:normal;flex:none;letter-spacing:.02em}
+.logo-item img.ulogo{width:32px;height:32px;border-radius:50%;object-fit:cover;background:#fff;flex:none;border:1px solid var(--line)}
+.school-top img.ulogo.big{width:46px;height:46px;border-radius:12px;object-fit:contain;background:#fff;border:1px solid var(--line);flex:none;padding:2px}
 /* school cards */
 .school-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
 .school-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;transition:transform .2s,box-shadow .2s}
@@ -638,6 +640,9 @@ var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isInt
 counters.forEach(function(el){cio.observe(el)});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+var LOGOS={"Harvard":"harvard","MIT":"mit","Stanford":"stanford","Arizona State":"asu","Oxford":"oxford","Cambridge":"cambridge","Imperial":"imperial","Toronto":"toronto","UBC":"ubc","Melbourne":"melbourne","NUS":"nus","NTU":"ntu","Purdue":"purdue","Georgia Tech":"gatech","Berkeley":"berkeley","UCLA":"ucla","Michigan":"michigan","NYU":"nyu","Northeastern":"northeastern","Florida":"florida"};
+function swapLogo(scope,cls){document.querySelectorAll(scope).forEach(function(el){if(el.querySelector("img.ulogo"))return;var t=el.textContent;for(var k in LOGOS){if(t.indexOf(k)>-1){var m=el.querySelector(".mono");if(!m)return;var img=document.createElement("img");img.className=("ulogo "+cls).trim();img.src="assets/logos/"+LOGOS[k]+".png";img.alt=k;img.loading="lazy";img.onerror=(function(m){return function(){this.remove();m.style.display=""}})(m);m.style.display="none";el.insertBefore(img,m);break}}})}
+swapLogo(".logo-item","");swapLogo(".school-top","big");
 </script>
 </body>
 </html>
