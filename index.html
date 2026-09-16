@@ -9,6 +9,9 @@
 <meta property="og:title" content="AP tại Trường 2026 — Chọn đúng môn, trúng đúng ngành">
 <meta property="og:description" content="Tra cứu combo AP theo ngành, lịch thi, học bổng, tín chỉ 30+ trường ĐH. Dành cho HS & phụ huynh THPT Chi Lăng Gia Lai.">
 <meta name="theme-color" content="#0a2472">
+<script>try{var t=localStorage.getItem('ap-theme');if(!t&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark')document.documentElement.dataset.theme='dark';}catch(e){}</script>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'vi',autoDisplay:false},'gt-el');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -27,6 +30,35 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);line-height:1.3;mar
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;text-decoration:none;font-family:var(--font-display);font-weight:700;padding:13px 26px;border-radius:var(--r-pill);border:0;cursor:pointer;font-size:15px;box-shadow:0 8px 20px rgba(10,36,114,.22)}
 .btn:hover{background:var(--navy-deep)}.btn.amber{background:var(--amber);box-shadow:0 8px 20px rgba(232,134,11,.3)}.btn.amber:hover{background:#c96f06}
 .btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--navy);box-shadow:none}.btn.ghost:hover{background:var(--navy-soft)}.btn.small{padding:10px 18px;font-size:13.5px}
+.nav-toggles{display:flex;align-items:center;gap:8px;margin-left:12px;flex:none}
+.lang-toggle{display:inline-flex;border:2px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.lang-toggle button{border:0;background:transparent;padding:7px 13px;font-family:var(--font-display);font-weight:700;font-size:12.5px;cursor:pointer;color:var(--muted)}
+.lang-toggle button.active{background:var(--navy);color:#fff}
+.theme-toggle{width:37px;height:37px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+html[data-theme="dark"]{--ink:#e9eff8;--body:#b7c4d8;--muted:#8d9cb3;--bg:#0a1120;--card:#101b31;--line:#233350;--navy:#5b8cff;--navy-deep:#16295e;--teal:#2dd4bf;--teal-soft:#0f3532;--amber:#f5a623;--amber-soft:#3a2a10;--navy-soft:#182747;--shadow:0 10px 30px rgba(0,0,0,.4);--shadow-lg:0 24px 60px rgba(0,0,0,.5)}
+html[data-theme="dark"] .nav{background:rgba(10,17,32,.92)}
+html[data-theme="dark"] .hero,html[data-theme="dark"] .logos,html[data-theme="dark"] .trust{background:#0c1526}
+html[data-theme="dark"] .exam-card{background:#0c1530;border:1px solid var(--line)}
+html[data-theme="dark"] .table-scroll,html[data-theme="dark"] .fmt{background:var(--card)}
+html[data-theme="dark"] thead th,html[data-theme="dark"] .fmt th{background:#1b2a47;color:#fff}
+html[data-theme="dark"] .grid tbody tr:hover td,html[data-theme="dark"] .table-scroll tbody tr:hover th{background:#16223c}
+html[data-theme="dark"] .btn.ghost{background:transparent;color:#cfe0ff;border-color:#5b8cff}
+html[data-theme="dark"] .btn.ghost:hover{background:#182747}
+html[data-theme="dark"] .tabs button,html[data-theme="dark"] .combo-btns button,html[data-theme="dark"] .filter-row button{background:#101b31;color:var(--body)}
+html[data-theme="dark"] .meta span{background:#16223c}
+html[data-theme="dark"] details.faq{background:var(--card)}
+html[data-theme="dark"] .quiz{background:var(--card)}
+html[data-theme="dark"] .quiz select,html[data-theme="dark"] #schoolSearch{background:#0c1530;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .tier-card.featured{background:#0c1530}
+html[data-theme="dark"] footer.site{background:#060b16}
+html[data-theme="dark"] .logo-item{background:#101b31}
+html[data-theme="dark"] .bar{background:#22314d}
+html[data-theme="dark"] .lang-toggle,html[data-theme="dark"] .theme-toggle{background:#101b31}
+html[data-theme="dark"] #comboBox{background:linear-gradient(135deg,#16223c,#0f3532);border-color:#5b8cff}
+html[data-theme="dark"] .final{background:linear-gradient(135deg,#0a1440,#16295e 55%,#0d3f38)}
+html[data-theme="dark"] .cell.hero-cell{background:linear-gradient(135deg,#16295e 0%,#1c3a8f 60%,#0d4d44 130%)}
+html[data-theme="dark"] .announce{background:#0a1440}
+.goog-te-banner-frame{display:none!important}body{top:0!important}
 .hero{background:#fff;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-140px;right:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(14,124,107,.12),transparent 70%)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;padding:60px 24px 52px;align-items:center;z-index:1}
@@ -104,10 +136,12 @@ footer.site{background:var(--ink);color:#fff;margin-top:52px}footer.site .wrap{d
 </style>
 </head>
 <body>
+<div id="gt-el" style="display:none"></div>
 <div class="announce">★ Năm học 2026 — lịch thi chi tiết · pass rate 2025 · credit 30+ trường · máy tính tiết kiệm · <a href="#tra-cuu">Mở tra cứu ngành →</a></div>
 <nav class="nav"><div class="wrap">
 <a class="brand" href="#top"><img src="assets/logos/chilang.jpg" alt="Logo THPT Chi Lăng Gia Lai" style="width:40px;height:40px;border-radius:12px;object-fit:cover;background:#fff;border:1px solid #e2e9f3;flex:none"><span class="brand-mark">AP</span><span>AP tại Trường · 2026<small>Toán · Lý · Hóa · Sinh · Tin · Anh</small></span></a>
 <div class="links"><a href="#mon-hoc">Môn học</a><a href="#lich-thi">Lịch thi</a><a href="#so-sanh">So sánh</a><a href="#lo-trinh">Lộ trình</a><a href="#tra-cuu">Tra cứu ngành</a><a href="#du-hoc">Du học</a><a href="#truong">Trường</a><a href="#chi-phi">Chi phí</a><a href="#hoc-lieu">Học liệu</a><a href="#vuot-troi">Vượt trội</a><a href="#gui-diem">Gửi điểm</a><a href="#ngay-thi">Ngày thi</a><a href="#faq">FAQ</a></div>
+<div class="nav-toggles"><span class="lang-toggle"><button id="btn-vi" class="active" onclick="setLang('vi')">VI</button><button id="btn-en" onclick="setLang('en')">EN</button></span><button id="btn-theme" class="theme-toggle" onclick="toggleTheme()" aria-label="Chế độ sáng/tối">🌙</button></div>
 <a class="btn small" style="margin-left:10px" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Đăng ký</a>
 </div></nav>
 <header class="hero" id="top"><div class="wrap">
@@ -117,7 +151,7 @@ footer.site{background:var(--ink);color:#fff;margin-top:52px}footer.site .wrap{d
 <p class="sub">Trường mở 6 môn AP — đăng ký <b>nhiều môn tùy nhu cầu</b>. Trang này có đủ: <b>lịch thi May 2026 theo từng môn</b>, tỉ lệ điểm 5 năm 2025, bảng quy đổi tín chỉ 30+ trường, công cụ tra cứu theo 10 nhóm ngành, kế hoạch ôn 8 tháng và checklist cho GVCN + phụ huynh.</p>
 <div class="hero-cta">
 <a class="btn amber" href="https://docs.google.com/spreadsheets/d/1lU94qYSOQJPNDda8Oh-BAnicr8Pq_SLOrG9uaCWZsmc/edit?usp=sharing" target="_blank" rel="noopener">Đăng ký trong 48h</a>
-<a class="btn ghost" href="#tra-cuu">Tra cứu combo PRO</a>
+<a class="btn ghost" href="#tra-cuu">Tra cứu combo theo ngành</a>
 <a class="btn ghost" href="#lich-thi">Xem lịch thi May 2026</a>
 </div>
 <div class="proof"><p><b>Đối chiếu College Board, Khan Academy, UWorld 2026.</b><br>Điểm thi thang 1–5 quyết định quy đổi tín chỉ — không phải điểm trên lớp.</p></div>
@@ -669,6 +703,10 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 var LOGOS={"Harvard":"harvard","MIT":"mit","Stanford":"stanford","Arizona State":"asu","Oxford":"oxford","Cambridge":"cambridge","Imperial":"imperial","Toronto":"toronto","UBC":"ubc","Melbourne":"melbourne","NUS":"nus","NTU":"ntu","Purdue":"purdue","Georgia Tech":"gatech","Berkeley":"berkeley","UCLA":"ucla","Michigan":"michigan","NYU":"nyu","Northeastern":"northeastern","Florida":"florida","HKUST":"hkust","HKU":"hku","KAIST":"kaist","Yonsei":"yonsei","Trinity":"tcd","Bocconi":"bocconi","Munich":"tum","Amsterdam":"amsterdam","McGill":"mcgill.ico","Waterloo":"waterloo","Austin":"utaustin","Washington":"washington.ico"};
 function swapLogo(scope,cls){document.querySelectorAll(scope).forEach(function(el){if(el.querySelector("img.ulogo"))return;var t=el.textContent;for(var k in LOGOS){if(t.indexOf(k)>-1){var m=el.querySelector(".mono");if(!m)return;var img=document.createElement("img");img.className=("ulogo "+cls).trim();img.src="assets/logos/"+LOGOS[k]+".png";img.alt=k;img.loading="lazy";img.onerror=(function(m){return function(){this.remove();m.style.display=""}})(m);m.style.display="none";el.insertBefore(img,m);break}}})}
 swapLogo(".logo-item","");swapLogo(".school-top","big");
+function setLang(l){var h=location.hostname;document.cookie='googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';document.cookie='googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain='+h;if(l==='en'){document.cookie='googtrans=/vi/en;path=/';document.cookie='googtrans=/vi/en;path=/;domain='+h;}try{localStorage.setItem('ap-lang',l)}catch(e){}location.reload();}
+function markLang(){var en=/googtrans=\/vi\/en/.test(document.cookie);var a=document.getElementById('btn-vi'),b=document.getElementById('btn-en');if(a)a.classList.toggle('active',!en);if(b)b.classList.toggle('active',en);}
+function toggleTheme(){var d=document.documentElement;var dark=d.dataset.theme!=='dark';if(dark){d.dataset.theme='dark'}else{d.removeAttribute('data-theme')}try{localStorage.setItem('ap-theme',dark?'dark':'light')}catch(e){}var b=document.getElementById('btn-theme');if(b)b.textContent=dark?'☀️':'🌙';}
+(function(){var b=document.getElementById('btn-theme');if(b)b.textContent=document.documentElement.dataset.theme==='dark'?'☀️':'🌙';markLang();})();
 function shareZalo(){window.open("https://sp.zalo.me/share?url="+encodeURIComponent(location.href),"_blank")}
 function shareFB(){window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href),"_blank")}
 function copyLink(){var u=location.href;if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){document.getElementById("copyMsg").textContent="Đã copy link!"})}else{prompt("Copy link:",u)}}
